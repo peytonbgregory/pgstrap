@@ -1,0 +1,337 @@
+/*
+Theme Name: pgstrap
+Theme URI: http://peytongregory.com/api/pgstrap.zip
+Author: Peyton Gregory
+Author URI: http://peytongregory.com
+Description: A responsive Wordpress theme.
+Version: 1.3
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: light
+*/
+
+.alignnone{margin:5px 20px 20px 0}.aligncenter,div.aligncenter{display:block;margin:5px auto}.alignright{float:right;margin:5px 0 20px 20px}.alignleft{float:left;margin:5px 20px 20px 0}a img.alignright{float:right;margin:5px 0 20px 20px}a img.alignleft,a img.alignnone{margin:5px 20px 20px 0}a img.alignleft{float:left}a img.aligncenter{display:block;margin-left:auto;margin-right:auto}.wp-caption{background:#fff;border:1px solid #f0f0f0;max-width:96%;padding:5px 3px 10px;text-align:center}.wp-caption.alignleft,.wp-caption.alignnone{margin:5px 20px 20px 0}.wp-caption.alignright{margin:5px 0 20px 20px}.wp-caption img{border:0;height:auto;margin:0;max-width:98.5%;padding:0;width:auto}.wp-caption p.wp-caption-text{font-size:11px;line-height:17px;margin:0;padding:0 4px 5px}.screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute!important;height:1px;width:1px;overflow:hidden}.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto!important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:700;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}.sticky{}.gallery-caption{}.bypostauthor{}
+
+html,body {
+	height: 100%
+}
+
+body {
+	color: #000;
+	background: #fff
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto!important;
+	height: 100%;
+	margin: 0 auto -50px
+}
+
+.footer, .push {
+	min-height: 50px;
+	clear: both
+}
+
+.main-logo-link img {
+	width:100%;
+	height:auto;
+	margin:15px auto;
+}
+
+.fade {
+	-moz-transition: ease 1s;
+	-ms-transition: ease 1s;
+	-webkit-transition: ease 1s;
+	-o-transition: ease 1s;
+	transition: ease 1s
+}
+
+.alignleft {
+	float: left;
+	margin: 0 15px 0 0
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 0 15px;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+	clear: both
+}
+
+.glyphicon:empty {
+	width: 35px!important
+}
+
+form {
+	margin-bottom: 0;
+	overflow: auto
+}
+
+input,textarea {
+	border-radius: 4px;
+	width: 100%;
+	max-height: 80px;
+	border: 1px solid #ccc;
+	padding: 3px 5px
+}
+
+input[type="submit"] {
+	width: auto
+}
+
+footer .menu {
+	list-style: none;
+	padding: 0;
+	margin: 0
+}
+
+footer .menu li {
+	list-style: none;
+	display: inline-block;
+	padding: 0 15px 0 0
+}
+
+ul.social-sprite li {
+	float: left;
+	list-style: none outside none;
+	border: none
+}
+
+ul.social-sprite li a {
+	background-image: url(images//mini-social-icons.png);
+	background-repeat: no-repeat;
+	background-size: auto 96px;
+	border: 0 none;
+	color: #fff;
+	direction: ltr;
+	display: block;
+	height: 32px;
+	overflow: hidden;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -999em;
+	transition: all .2s ease 0;
+	width: 32px;
+	margin-left: 0px;
+}
+
+.ie7 ul.social-sprite li a,.ie8 ul.social-sprite li a {
+	background-image: url(images/mini-social-icons.png)
+}
+
+ul.social-sprite li.facebook a {
+	background-position: 0 -32px
+}
+
+ul.social-sprite li.googleplus a {
+	background-position: -96px -32px
+}
+
+ul.social-sprite li.rss a {
+	background-position: -192px -32px
+}
+
+ul.social-sprite li.twitter a {
+	background-position: -256px -32px
+}
+
+ul.social-sprite li.youtube a {
+	background-position: -320px -32px
+}
+
+ul.social-sprite li.pinterest a {
+	background-position: -160px -32px
+}
+
+ul.social-sprite li.linkedin a {
+	background-position: -128px -32px
+}
+
+ul.social-sprite li.instagram a {
+	background-position: -288px -32px;
+}
+
+.social-sprite {
+	border-radius: 0;
+	overflow: hidden;
+	margin: 15px 0;
+	padding: 0;
+	float: right
+}
+
+.social-sprite li {
+	margin-left:5px;
+}
+
+.social-sprite li:first-child {
+	margin-left:0;
+}
+
+.ih-item {
+	position: relative;
+	-webkit-transition: all .35s ease-in-out;
+	-moz-transition: all .35s ease-in-out;
+	transition: all .35s ease-in-out
+}
+
+.ih-item,.ih-item * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.ih-item a {
+	color: #333
+}
+
+.ih-item a:hover {
+	text-decoration: none
+}
+
+.ih-item img {
+	width: 100%;
+	height: auto
+}
+
+.ih-item.square {
+	position: relative;
+	width: 100%;
+	border: 8px solid #fff;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+	height: auto;
+	max-height: 305px
+}
+
+.ih-item.square .info {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden
+}
+
+.ih-item.square.effect6 {
+	overflow: hidden
+}
+
+.ih-item.square.effect6 .img {
+	-webkit-transition: all .35s ease-in-out;
+	-moz-transition: all .35s ease-in-out;
+	transition: all .35s ease-in-out;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1)
+}
+
+.ih-item.square.effect6 .info {
+	background: #fff;
+	background: rgba(255,255,255,0.6);
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all .35s ease-in-out;
+	-moz-transition: all .35s ease-in-out;
+	transition: all .35s ease-in-out
+}
+
+.ih-item.square.effect6 .info h3 {
+	text-transform: uppercase;
+	color: #1f4e79;
+	text-align: center;
+	font-size: 18px;
+	padding: 15px;
+	background: rgba(255,255,255,0.6);
+	margin: 80px 0 0;
+	-webkit-transition: all .35s ease-in-out;
+	-moz-transition: all .35s ease-in-out;
+	transition: all .35s ease-in-out;
+	letter-spacing: 1px
+}
+
+.ih-item.square.effect6 .info p {
+	font-style: italic;
+	font-size: 16px;
+	position: relative;
+	color: #1f4e79;
+	padding: 20px;
+	text-align: center;
+	-webkit-transition: all .35s .1s linear;
+	-moz-transition: all .35s .1s linear;
+	transition: all .35s .1s linear
+}
+
+.ih-item.square.effect6 a:hover .img {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2)
+}
+
+.ih-item.square.effect6 a:hover .info {
+	visibility: visible;
+	opacity: 1
+}
+
+.ih-item.square.effect6.from_top_and_bottom .info h3 {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%)
+}
+
+.ih-item.square.effect6.from_top_and_bottom .info p {
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+	transform: translateY(100%)
+}
+
+.ih-item.square.effect6.from_top_and_bottom a:hover .info h3,.ih-item.square.effect6.from_top_and_bottom a:hover .info p {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0)
+}
+
+/*------------------------------------*/
+/*------------------------------------*/
+/*-------- Responsive Section --------*/
+/*------------------------------------*/
+/*------------------------------------*/
+@media (min-width: 1200px) {
+
+
+}
+
+
+@media all and (max-width:1199px) {
+
+
+}
+
+
+@media all and (max-width:990px) {
+
+
+}
+
+
+@media all and (max-width:767px) {
+	footer .text-right {
+    text-align: center;
+}
+	
+}
