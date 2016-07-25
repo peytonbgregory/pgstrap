@@ -14,18 +14,22 @@ get_header(); ?>
 					<?php if ( have_posts() ) : ?>
 					
 						<?php while ( have_posts() ) : the_post(); ?>
-			
-							<?php
-								/* Include the Post-Format-specific template for the content.
-								 * If you want to override this in a child theme, then include a file
-								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-								 */
-								get_template_part('content', get_post_format());
-							?>
-			
+							
+                            
+							<?php if ( has_post_thumbnail()) { ?>
+                            	<div class="thumb-wrapper">
+                                  <div class="col-md-3"><?php the_post_thumbnail('medium',array('class'=>'img-responsive img-thumbnail post-img')); ?></div>
+                                 	<div class="col-md-9"><?php get_template_part('content', get_post_format());?></div>
+                               </div>
+                            <?php } else {?> 
+                            	
+								<div class="thumb-wrapper">
+								<?php get_template_part('content', get_post_format());?>
+                                </div>
+                                <?php }?>
 						<?php endwhile; ?>
-			
-					
+							
+						<?php upbootwp_content_nav('nav-below'); ?>
 			
 					<?php else : ?>
 						<?php get_template_part( 'no-results', 'index' ); ?>

@@ -23,7 +23,7 @@ class ThemeUpdateChecker {
 	public $metadataUrl = 'http://peytongregory.com/api/info.json';        //The URL of the theme's metadata file.
 	public $enableAutomaticChecking = false; //Enable/disable automatic update checks.
 	
-	protected $optionName = '1.3';      //Where to store update info.
+	protected $optionName = '1.5';      //Where to store update info.
 	protected $automaticCheckDone = false;
 	protected static $filterPrefix = 'tuc_request_update_';
 	                                 

@@ -1,9 +1,10 @@
-<?php /* * The Header for our theme. */?><!DOCTYPE html><html <?php language_attributes(); ?>><head>
+<?php /* * The Header for our theme. */?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>><head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Cache-control" content="public">
-<meta http-equiv="expires" content="Wed, 20 May 2015 12:00:00 GMT" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> 
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
@@ -56,8 +57,8 @@
 </head>
 <?php $options=get_option( 'theme_settings' ); ?>
 <?php flush(); ?><body <?php body_class(); ?>>
-<div class="wrapper">
-    <div id="page" class="hfeed site">
+<div id="container">
+      
         <?php do_action( 'before' ); ?>
 		<header class="container-fluid">
 			<?php get_template_part('includes/fluidstart'); ?>

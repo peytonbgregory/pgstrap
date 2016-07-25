@@ -4,7 +4,7 @@
  */
 get_header(); ?>
 <div class="container-fluid single-page">
-	<?php get_template_part('includes/fluidend'); ?>
+	<?php get_template_part('includes/fluidstart'); ?>
 			<div class="col-md-8">
 				<div id="primary" class="content-area">
 					<main id="main" class="site-main" role="main">

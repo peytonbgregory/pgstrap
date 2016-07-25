@@ -1,15 +1,5 @@
-<?php //Initialize the update checker.
-//require 'includes/theme-update-checker.php';
-//$example_update_checker = new ThemeUpdateChecker(
-//    'PGStrap',
-//    'http://peytongregory.com/api/info.json'
-//); 
- require 'includes/settings.php';
- require 'includes/theme-update-checker.php';
- $MyThemeUpdateChecker = new ThemeUpdateChecker(
-    'PGStrap',
- 'http://peytongregory.com/api/?action=get_metadata&pgstrap.zip' //Metadata URL.
- );
+<?php 
+
  
 function bgmpShortcodeCalled()
 {
@@ -24,8 +14,22 @@ add_editor_style();
 
 
 
-set_post_thumbnail_size( 300, 300 ); // 50 pixels wide by 50 pixels tall, resize mode
+set_post_thumbnail_size( 300, 300 ); 
  
+ //* Remove query strings from static resources
+function _remove_script_version( $src ){
+$parts = explode( '?ver', $src );
+return $parts[0];
+}
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+ 
+ 
+ //* Remove WP emoji code
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+
 if (!isset($content_width)) $content_width = 770;
 
 
@@ -81,8 +85,8 @@ function pgstrap_widgets_init() {
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	));
 	
 	register_sidebar(array(
@@ -286,7 +290,13 @@ add_theme_support( 'post-thumbnails' );
 
 
 add_theme_support( 'html5', array( 'search-form' ) );
-
+ require 'includes/settings.php';
+ require 'includes/categoryposts.php';
+ require 'includes/theme-update-checker.php';
+ $MyThemeUpdateChecker = new ThemeUpdateChecker(
+    'PGStrap',
+ 'http://peytongregory.com/api/?action=get_metadata&pgstrap.zip' //Metadata URL.
+ );
 //Custom Category post widget 
 
 // Register thumbnail sizes.

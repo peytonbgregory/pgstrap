@@ -10,13 +10,7 @@ $options = get_option( 'theme_settings' ); ?>
 </div>
 <footer class="container-fluid">
 	<?php get_template_part('includes/fluidstart'); ?>
-        <div class="row" id="footer-widgets">
-        	<?php dynamic_sidebar ('footer-widget-left'); ?>
-            <?php dynamic_sidebar ('footer-widget-right'); ?>
-        </div><!-- .row -->
-       
-        <div class="row" id="footer-navigation">
-            <div class="col-md-8">
+            <div class="col-md-8" id="footer-navigation">
             	<?php wp_nav_menu( array('menu' => 'Footer Menu' )); ?>
             </div>  
             <div class="col-md-4 text-right"> 
@@ -24,7 +18,7 @@ $options = get_option( 'theme_settings' ); ?>
                 <span class="sep"> | </span>
                 <a href="http://theideacenter.com/" title="Site Designed by The Idea Center" target="_blank" class="credits-link">Site Design</a>
             </div>
-	<?php get_template_part('includes/fluidstart'); ?>
+	<?php get_template_part('includes/fluidend'); ?>
 </footer>
 <script src="/wp-content/themes/pgstrap/js/bootstrap.min.js"></script>
 <script>

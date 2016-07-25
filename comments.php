@@ -1,20 +1,7 @@
 <?php
 /**
  * The template for displaying Comments.
- *
- * The area of the page that contains both current comments
- * and the comment form. The actual display of comments is
- * handled by a callback to upbootwp_comment() which is
- * located in the inc/template-tags.php file.
- *
- * @author Matthias Thom | http://upplex.de
- * @package upBootWP 1.1
- */
 
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
  */
 if ( post_password_required() ) {
 	echo '<p class="nocomments">This post is password protected. Enter the password to view comments.</p>';
